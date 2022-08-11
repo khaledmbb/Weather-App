@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./Css/Style.css">
+
+  <script src="./Js/Main.js" defer></script>
+
+  <title>Weather App</title>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>Weather App</header>
+
+    <!-- Input Part -->
+    <section class="input-part">
+      <p class="info-txt"></p>
+      <div class="content">
+        <input type="text" spellcheck="false" placeholder="Enter city name" required>
+        <div class="countries">
+          <ul></ul>
+        </div>
+        <div class="separator"></div>
+        <button>Get Device Location</button>
+      </div>
+    </section>
+
+    <!-- Weather Part -->
+    <section class="weather-part">
+      <img alt="Weather Icon">
+      <div class="temp">
+        <span class="numb">32</span>
+        <span class="deg">°</span>C
+      </div>
+      <div class="weather w-type">Cloudy Day</div>
+      <div class="location">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="24" height="24"
+          viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <circle cx="12" cy="11" r="3"></circle>
+          <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
+        </svg>
+        <span></span>
+      </div>
+      <div class="bottom-details">
+        <div class="column feels">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-temperature" width="24"
+            height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M10 13.5a4 4 0 1 0 4 0v-8.5a2 2 0 0 0 -4 0v8.5"></path>
+            <line x1="10" y1="9" x2="14" y2="9"></line>
+          </svg>
+          <div class="details">
+            <div class="temp">
+              <span class="numb-2">23</span>
+              <span class="deg">°C</span>
+            </div>
+            <p>Feels like</p>
+          </div>
+        </div>
+        <div class="column humidity">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-droplet-filled-2" width="24"
+            height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M6.8 11a6 6 0 1 0 10.396 0l-5.197 -8l-5.2 8z"></path>
+            <path d="M6 14h12"></path>
+            <path d="M7.305 17.695l3.695 -3.695"></path>
+            <path d="M10.26 19.74l5.74 -5.74l-5.74 5.74z"></path>
+          </svg>
+          <div class="details">
+            <span>23</span>
+            <p>Humidity</p>
+          </div>
+        </div>
+        <div class="column sunrise">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-react-native" width="24"
+            height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M6.357 9c-2.637 .68 -4.357 1.845 -4.357 3.175c0 2.107 4.405 3.825 9.85 3.825c.74 0 1.26 -.039 1.95 -.097">
+            </path>
+            <path
+              d="M9.837 15.9c-.413 -.596 -.806 -1.133 -1.18 -1.8c-2.751 -4.9 -3.488 -9.77 -1.63 -10.873c1.15 -.697 3.047 .253 4.974 2.254">
+            </path>
+            <path
+              d="M6.429 15.387c-.702 2.688 -.56 4.716 .56 5.395c1.783 1.08 5.387 -1.958 8.043 -6.804c.36 -.67 .683 -1.329 .968 -1.978">
+            </path>
+            <path
+              d="M12 18.52c1.928 2 3.817 2.95 4.978 2.253c1.85 -1.102 1.121 -5.972 -1.633 -10.873c-.384 -.677 -.777 -1.204 -1.18 -1.8">
+            </path>
+            <path
+              d="M17.66 15c2.612 -.687 4.34 -1.85 4.34 -3.176c0 -2.11 -4.408 -3.824 -9.845 -3.824c-.747 0 -1.266 .029 -1.955 .087">
+            </path>
+            <path
+              d="M8 12c.285 -.66 .607 -1.308 .968 -1.978c2.647 -4.844 6.253 -7.89 8.046 -6.801c1.11 .679 1.262 2.706 .56 5.393">
+            </path>
+            <path
+              d="M12.26 12.015h-.01c-.01 .13 -.12 .24 -.26 .24a0.263 .263 0 0 1 -.25 -.26c0 -.14 .11 -.25 .24 -.25h-.01c.13 -.01 .25 .11 .25 .24">
+            </path>
+          </svg>
+          <div class="details">
+            <div class="temp">
+              <span class="numb-2"></span>
+            </div>
+            <p>pressure</p>
+          </div>
+        </div>
+        <div class="column sunset">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-wind" width="24" height="24"
+            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M5 8h8.5a2.5 2.5 0 1 0 -2.34 -3.24"></path>
+            <path d="M3 12h15.5a2.5 2.5 0 1 1 -2.34 3.24"></path>
+            <path d="M4 16h5.5a2.5 2.5 0 1 1 -2.34 3.24"></path>
+          </svg>
+          <div class="details">
+            <span></span>
+            <p>Wind Speed</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</body>
+
+</html>
